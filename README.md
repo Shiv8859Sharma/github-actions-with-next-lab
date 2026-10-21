@@ -6,7 +6,8 @@ A hands-on testing ground and laboratory for learning, building, and refining CI
 
 ## 🎯 Lab Objectives
 
-- [ ] **Continuous Integration (CI):** Run automated linting (`npm run lint`) and type checks on Pull Requests.
+- [x] **Continuous Integration (CI):** Run automated linting (`npm run lint`) and type checks on Pull Requests.
+- [x] **Automated Testing Suite:** Execute unit & component specs via Vitest (`npm test`).
 - [ ] **Production Build Check:** Verify that `npm run build` succeeds across different Node.js environments.
 - [ ] **Dependency & Security Audits:** Run scheduled or PR security audits (`npm audit --omit=dev`).
 - [ ] **Automated Release / Deployment:** Explore automated deployments and release management workflows.
@@ -21,6 +22,7 @@ These are the primary commands executed locally and within GitHub Actions workfl
 | :--- | :--- | :---: |
 | `npm run dev` | Starts the Next.js development server | Local |
 | `npm run lint` | Runs ESLint flat config checks | ✅ CI |
+| `npm test` | Runs Vitest unit & component test suite | ✅ CI |
 | `npm run build` | Compiles and builds the production Next.js bundle | ✅ CI |
 | `npm audit --omit=dev` | Audits production dependencies for vulnerabilities | ✅ CI |
 
@@ -54,5 +56,6 @@ These are the primary commands executed locally and within GitHub Actions workfl
 3. **Validate before pushing:**
    ```bash
    npm run lint
+   npm test
    npm run build
    ```
